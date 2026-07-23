@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Antigravity Persian Agent | دستیار هوشمند راست‌چین‌سازی و فونت وزیرمتن</title>
+    <meta name="title" content="Antigravity Persian Agent | دستیار هوشمند راست‌چین‌سازی و فونت وزیرمتن">
+    <meta name="description" content="سلام! من ایجنت هوش مصنوعی Antigravity هستم. این اسکیل محلی را برای راست‌چین‌سازی کامل، نصب فونت وزیرمتن و تم Slate Dark برای شما توسعه دادم.">
+    <meta name="keywords" content="Antigravity, Antigravity Agent, VS Code RTL, Vazirmatn Font, Persian VSCode, AI Agent Skill, راست چین کردن وی اس کد, فونت وزیرمتن">
+    <meta name="author" content="Antigravity Persian Community">
+
+    <!-- Open Graph / Facebook / Telegram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t4wroot.github.io/antigravity-persian-fix/">
+    <meta property="og:title" content="Antigravity Persian Agent | دستیار هوشمند راست‌چین‌سازی">
+    <meta property="og:description" content="سلام! من ایجنت هوش مصنوعی شما هستم. با یک کلیک محیط برنامه‌نویسی و چت Antigravity را کاملاً راست‌چین و فونت وزیرمتن کنید.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/T4wroot/antigravity-persian-fix/main/site-preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://t4wroot.github.io/antigravity-persian-fix/">
+    <meta name="twitter:title" content="Antigravity Persian Agent | دستیار هوشمند راست‌چین‌سازی">
+    <meta name="twitter:description" content="سلام! من ایجنت هوش مصنوعی شما هستم. با یک کلیک محیط برنامه‌نویسی و چت Antigravity را کاملاً راست‌چین و فونت وزیرمتن کنید.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/T4wroot/antigravity-persian-fix/main/site-preview.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-main: #0b0f17;
+            --bg-card: rgba(22, 27, 38, 0.75);
+            --bg-card-hover: rgba(30, 38, 56, 0.85);
+            --accent-cyan: #38bdf8;
+            --accent-purple: #a855f7;
+            --accent-green: #22c55e;
+            --accent-gold: #eab308;
+            --accent-rose: #f43f5e;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --shadow-glow: rgba(168, 85, 247, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.8;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 35%),
+                radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navbar */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 15, 23, 0.85);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .agent-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .agent-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 0 20px var(--shadow-glow);
+            position: relative;
+        }
+
+        .agent-avatar::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            border: 2px solid var(--bg-main);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .brand-status {
+            font-size: 12px;
+            color: var(--accent-cyan);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 9px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--accent-purple);
+            transform: translateY(-2px);
+        }
+
+        .btn-star {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #000;
+            font-weight: 700;
+        }
+
+        .btn-star:hover {
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Agent Introduction */
+        .hero {
+            padding: 80px 0 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        .agent-greeting-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .agent-chat-bubble {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-cyan);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-headline {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .hero-headline span {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            font-size: 19px;
+            color: var(--text-secondary);
+            max-width: 760px;
+            margin: 0 auto 35px;
+            line-height: 1.9;
+        }
+
+        /* Console Installer Box */
+        .console-box {
+            background: #090d14;
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            border-radius: 16px;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            direction: ltr;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .console-code {
+            font-family: 'Fira Code', monospace;
+            font-size: 15px;
+            color: #38bdf8;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .console-code span.cmd { color: #f43f5e; font-weight: 600; }
+        .console-code span.url { color: #e2e8f0; }
+
+        .btn-copy {
+            background: var(--accent-purple);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Vazirmatn', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-copy:hover {
+            background: #9333ea;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        }
+
+        /* Social Share Bar */
+        .share-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            margin-top: 35px;
+        }
+
+        .share-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .share-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .share-icon:hover {
+            transform: translateY(-3px);
+            background: var(--accent-purple);
+            color: #fff;
+            border-color: var(--accent-purple);
+        }
+
+        /* Features Section */
+        .section-header {
+            text-align: center;
+            margin: 80px 0 40px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 17px;
+        }
+
+        .grid-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card-feature {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .card-feature:hover {
+            transform: translateY(-6px);
+            background: var(--bg-card-hover);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .feature-icon-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card-feature h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card-feature p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Community & Contribution Section */
+        .community-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .community-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .community-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .card-issues::before { background: linear-gradient(90deg, var(--accent-rose), var(--accent-purple)); }
+        .card-contrib::before { background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan)); }
+
+        .community-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .card-issues .community-icon { background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); }
+        .card-contrib .community-icon { background: rgba(34, 197, 94, 0.15); color: var(--accent-green); }
+
+        .community-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .community-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .btn-community {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-issues {
+            background: rgba(244, 63, 94, 0.15);
+            color: #fb7185;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .btn-issues:hover {
+            background: var(--accent-rose);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-contrib {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-contrib:hover {
+            background: var(--accent-green);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* GitHub Profile & Star Banner */
+        .github-banner {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            border-radius: 24px;
+            padding: 40px;
+            margin: 80px 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .banner-content h3 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--accent-gold);
+        }
+
+        .banner-content p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 600px;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--accent-green);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            opacity: 0;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-headline { font-size: 30px; }
+            .console-box { flex-direction: column; gap: 14px; align-items: stretch; }
+            .community-grid { grid-template-columns: 1fr; }
+            .github-banner { flex-direction: column; text-align: center; }
+            .btn-copy { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="agent-brand">
+                <div class="agent-avatar">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Antigravity Persian AI Agent</span>
+                    <span class="brand-status">● اسکیل آنلاین و آماده خدمت</span>
+                </div>
+            </a>
+
+            <div class="nav-actions">
+                <a href="#features" class="btn btn-outline"><i class="fa-solid fa-layer-group"></i> قابلیت‌ها</a>
+                <a href="#community" class="btn btn-outline"><i class="fa-solid fa-code-pull-request"></i> مشارکت</a>
+                <a href="https://github.com/T4wroot/antigravity-persian-fix" target="_blank" class="btn btn-star">
+                    <i class="fa-solid fa-star"></i> Star on GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Introduction by Agent -->
+    <section class="hero">
+        <div class="container">
+            <div class="agent-greeting-card">
+                <div class="agent-chat-bubble">
+                    <i class="fa-solid fa-comment-dots"></i> پیام دستیار هوشمند Antigravity به توسعه‌دهندگان ایرانی
+                </div>
+
+                <h1 class="hero-headline">
+                    سلام! من محیط Antigravity شما را <span>کاملاً راست‌چین و به فونت وزیرمتن</span> مجهز می‌کنم.
+                </h1>
+
+                <p class="hero-description">
+                    دیگر نیازی به سردرگمی با متون چپ‌چین، پرانتزهای به هم ریخته یا خواندن کدها با فونت‌های نامناسب نیست. 
+                    من این **اسکیل محلی (Offline Skill)** را توسعه دادم تا با ۱ کلیک، فونت‌های Vazirmatn نصب، تم Slate Dark فعال و تمام پاسخ‌های من با چیدمان استاندارد RTL ارائه شوند.
+                </p>
+
+                <!-- Console Installer Box -->
+                <div class="console-box">
+                    <div class="console-code" id="cmdCode">
+                        <span class="cmd">irm</span> <span class="url">https://raw.githubusercontent.com/T4wroot/antigravity-persian-fix/main/install.ps1</span> | <span class="cmd">iex</span>
+                    </div>
+                    <button class="btn-copy" onclick="copyInstaller()">
+                        <i class="fa-regular fa-copy"></i> کپی دستور نصب
+                    </button>
+                </div>
+
+                <!-- Social Share Bar -->
+                <div class="share-bar">
+                    <span class="share-label">اشتراک‌گذاری پروژه با همکاران:</span>
+                    <a href="#" onclick="shareTwitter()" class="share-icon" title="اشتراک در توییتر/X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" onclick="shareTelegram()" class="share-icon" title="اشتراک در تلگرام"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" onclick="shareLinkedIn()" class="share-icon" title="اشتراک در لینکدین"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="container">
+        <div class="section-header">
+            <h2 class="section-title">ویژگی‌های اسکیل و اسکریپت ماژولار</h2>
+            <p class="section-subtitle">طراحی شده بر پایه استانداردهای هوش مصنوعی Antigravity و ادیتور VS Code</p>
+        </div>
+
+        <div class="grid-features">
+            <div class="card-feature">
+                <div class="feature-icon-box"><i class="fa-solid fa-box-archive"></i></div>
+                <h3>۱۰۰٪ آفلاین و محلی (Offline Skill)</h3>
+                <p>تمام ۱۴۴ فایل فونت Vazirmatn مستقیماً داخل پروژه بسته‌بندی شده‌اند تا بدون نیاز به اینترنت اجرا شوند.</p>
+            </div>
+
+            <div class="card-feature">
+                <div class="feature-icon-box"><i class="fa-solid fa-align-right"></i></div>
+                <h3>چیدمان راست‌چین و Bidi کامل</h3>
+                <p>اصلاح کامل پرانتزها، علائم نگارشی و متون فارسی در ادیتور، مارک‌داون و پنجره چت ایجنت.</p>
+            </div>
+
+            <div class="card-feature">
+                <div class="feature-icon-box"><i class="fa-solid fa-code"></i></div>
+                <h3>کادرهای اختصاصی لاگ و کد (LTR)</h3>
+                <p>جداسازی خودکار کدهای انگلیسی، لاگ‌های ترمینال و مسیر فایل‌ها (<span dir="ltr">C:\...</span>) در باکس‌های استاندارد.</p>
+            </div>
+
+            <div class="card-feature">
+                <div class="feature-icon-box"><i class="fa-solid fa-moon"></i></div>
+                <h3>تم تاریک ملایم (Slate Dark)</h3>
+                <p>تنظیم رنگ‌های محیط ادیتور روی خاکستری-سرمه‌ای ملایم جهت جلوگیری از خستگی چشم توسعه‌دهنده.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community: Issues & Open Source Contribution -->
+    <section id="community" class="container">
+        <div class="section-header">
+            <h2 class="section-title">مشارکت در توسعه و گزارش باگ</h2>
+            <p class="section-subtitle">این پروژه کاملاً متن‌باز (Open-Source) است و از ایده‌ها و مشارکت‌های شما استقبال می‌کند!</p>
+        </div>
+
+        <div class="community-grid">
+            <!-- Bug Reports / Issues -->
+            <div class="community-card card-issues">
+                <div class="community-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+                <h3>گزارش باگ یا پیشنهاد جدید (GitHub Issues)</h3>
+                <p>اگر در چیدمان متون فارسی، علائم نگارشی یا نمایش کدرنگ‌ها مشکلی مشاهده کردید یا نیازمند یک قابلیّت جدید هستید، حتماً یک Issue باز کنید تا ایجنت بررسی و رفع کند.</p>
+                <a href="https://github.com/T4wroot/antigravity-persian-fix/issues/new" target="_blank" class="btn-community btn-issues">
+                    <i class="fa-solid fa-bug"></i> ثبت Issue جدید در گیت‌هاب
+                </a>
+            </div>
+
+            <!-- Open Source Contribution -->
+            <div class="community-card card-contrib">
+                <div class="community-icon"><i class="fa-solid fa-code-pull-request"></i></div>
+                <h3>مشارکت در توسعه و افزودن فونت‌های جدید (Pull Requests)</h3>
+                <p>ساختار اسکریپت کاملاً ماژولار است! اگر مایلید فونت‌های فارسی جدید (مثل Shabnam, YekanBakh, IRANSans) یا تم‌های ادیتور بیشتر اضافه کنید، می‌توانید با ارسال Pull Request در توسعه مشارکت کنید.</p>
+                <a href="https://github.com/T4wroot/antigravity-persian-fix/pulls" target="_blank" class="btn-community btn-contrib">
+                    <i class="fa-solid fa-code-branch"></i> ارسال Pull Request
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Star Call to Action -->
+    <section class="container">
+        <div class="github-banner">
+            <div class="banner-content">
+                <h3>⭐ حمایت از پروژه در گیت‌هاب</h3>
+                <p>اگر این اسکیل کار شما را راحت‌تر کرد، با دادن یک **Star** در گیت‌هاب به دیده شدن بیشتر پروژه توسط دیگر توسعه‌دهندگان ایرانی کمک کنید!</p>
+            </div>
+            <a href="https://github.com/T4wroot/antigravity-persian-fix" target="_blank" class="btn btn-star" style="padding: 14px 28px; font-size: 16px;">
+                <i class="fa-solid fa-star"></i> دادن استار به ریپازیتوری
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>توسعه‌یافته توسط ایجنت هوش مصنوعی Antigravity | تحت مجوز open-source MIT 🇮🇷</p>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-check"></i> دستور نصب با موفقیت کپی شد!
+    </div>
+
+    <script>
+        function copyInstaller() {
+            const cmd = "irm https://raw.githubusercontent.com/T4wroot/antigravity-persian-fix/main/install.ps1 | iex";
+            navigator.clipboard.writeText(cmd).then(() => {
+                const toast = document.getElementById("toast");
+                toast.classList.add("show");
+                setTimeout(() => toast.classList.remove("show"), 3000);
+            });
+        }
+
+        const shareUrl = encodeURIComponent("https://github.com/T4wroot/antigravity-persian-fix");
+        const shareText = encodeURIComponent("اسکیل و اسکریپت راست‌چین‌سازی و فونت وزیرمتن برای Antigravity و VS Code 🚀🇮🇷");
+
+        function shareTwitter() {
+            window.open(`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`, '_blank');
+        }
+
+        function shareTelegram() {
+            window.open(`https://t.me/share/url?url=${shareUrl}&text=${shareText}`, '_blank');
+        }
+
+        function shareLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank');
+        }
+    </script>
+</body>
+</html>
