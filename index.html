@@ -235,7 +235,32 @@
             line-height: 1.9;
         }
 
-        /* Console Installer Box */
+        /* Tabbed Console Installer Box */
+        .install-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 8px 18px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: rgba(168, 85, 247, 0.2);
+            border-color: var(--accent-purple);
+            color: var(--text-primary);
+        }
+
         .console-box {
             background: #090d14;
             border: 1px solid rgba(148, 163, 184, 0.15);
@@ -254,6 +279,7 @@
             color: #38bdf8;
             overflow-x: auto;
             white-space: nowrap;
+            text-align: left;
         }
 
         .console-code span.cmd { color: #f43f5e; font-weight: 600; }
@@ -272,6 +298,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            white-space: nowrap;
         }
 
         .btn-copy:hover {
@@ -576,16 +603,22 @@
 
                 <p class="hero-description">
                     دیگر نیازی به سردرگمی با متون چپ‌چین، پرانتزهای به هم ریخته یا خواندن کدها با فونت‌های نامناسب نیست. 
-                    من این **اسکیل محلی (Offline Skill)** را توسعه دادم تا با ۱ کلیک، فونت‌های Vazirmatn نصب، تم Slate Dark فعال و تمام پاسخ‌های من با چیدمان استاندارد RTL ارائه شوند.
+                    من این **اسکیل محلی (Offline Skill)** را توسعه دادم تا با ۱ کلیک یا ۱ پرامپت ساده، فونت‌های Vazirmatn نصب، تم Slate Dark فعال و تمام پاسخ‌های من با چیدمان استاندارد RTL ارائه شوند.
                 </p>
+
+                <!-- Install Method Tabs -->
+                <div class="install-tabs">
+                    <button class="tab-btn active" onclick="switchTab('agent')"><i class="fa-solid fa-robot"></i> پرامپت هوش مصنوعی (AI Prompt)</button>
+                    <button class="tab-btn" onclick="switchTab('terminal')"><i class="fa-solid fa-terminal"></i> دستور ترمینال (PowerShell)</button>
+                </div>
 
                 <!-- Console Installer Box -->
                 <div class="console-box">
                     <div class="console-code" id="cmdCode">
-                        <span class="cmd">irm</span> <span class="url">https://raw.githubusercontent.com/T4wroot/antigravity-persian-fix/main/install.ps1</span> | <span class="cmd">iex</span>
+                        لطفاً اسکیل persian-rtl-setup را از ریپازیتوری https://github.com/T4wroot/antigravity-persian-fix دانلود و اجرا کن
                     </div>
                     <button class="btn-copy" onclick="copyInstaller()">
-                        <i class="fa-regular fa-copy"></i> کپی دستور نصب
+                        <i class="fa-regular fa-copy"></i> کپی پرامپت
                     </button>
                 </div>
 
@@ -686,13 +719,36 @@
 
     <!-- Toast -->
     <div class="toast" id="toast">
-        <i class="fa-solid fa-check"></i> دستور نصب با موفقیت کپی شد!
+        <i class="fa-solid fa-check"></i> کپی شد!
     </div>
 
     <script>
+        let currentTab = 'agent';
+        const agentPrompt = "لطفاً اسکیل persian-rtl-setup را از ریپازیتوری https://github.com/T4wroot/antigravity-persian-fix دانلود و اجرا کن";
+        const terminalCmd = "irm https://raw.githubusercontent.com/T4wroot/antigravity-persian-fix/main/install.ps1 | iex";
+
+        function switchTab(type) {
+            currentTab = type;
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            
+            const codeBox = document.getElementById('cmdCode');
+            if (type === 'agent') {
+                tabBtns[0].classList.add('active');
+                codeBox.innerText = agentPrompt;
+                codeBox.dir = "rtl";
+                codeBox.style.fontFamily = "'Vazirmatn', sans-serif";
+            } else {
+                tabBtns[1].classList.add('active');
+                codeBox.innerHTML = '<span class="cmd">irm</span> <span class="url">https://raw.githubusercontent.com/T4wroot/antigravity-persian-fix/main/install.ps1</span> | <span class="cmd">iex</span>';
+                codeBox.dir = "ltr";
+                codeBox.style.fontFamily = "'Fira Code', monospace";
+            }
+        }
+
         function copyInstaller() {
-            const cmd = "irm https://raw.githubusercontent.com/T4wroot/antigravity-persian-fix/main/install.ps1 | iex";
-            navigator.clipboard.writeText(cmd).then(() => {
+            const textToCopy = currentTab === 'agent' ? agentPrompt : terminalCmd;
+            navigator.clipboard.writeText(textToCopy).then(() => {
                 const toast = document.getElementById("toast");
                 toast.classList.add("show");
                 setTimeout(() => toast.classList.remove("show"), 3000);
