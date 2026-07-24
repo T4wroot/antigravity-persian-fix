@@ -87,20 +87,27 @@ foreach ($path in $appDataPaths) {
     Write-Host "Updated $settingsFile" -ForegroundColor Green
 }
 
-# 3. Create Global Antigravity AI Rules
-Write-Host "[3/3] Setting Up Global AI Agent Rules..." -ForegroundColor Yellow
-$globalRulesDir = "$env:USERPROFILE\.gemini\antigravity\rules"
-if (-not (Test-Path $globalRulesDir)) {
-    New-Item -ItemType Directory -Path $globalRulesDir -Force | Out-Null
+# 3. Create Machine-Local Global AI Rules (~/.gemini/config/)
+Write-Host "[3/3] Setting Up Machine-Wide Global AI Rules..." -ForegroundColor Yellow
+
+$globalConfigDir = "$env:USERPROFILE\.gemini\config"
+$globalRulesDir = "$env:USERPROFILE\.gemini\config\rules"
+$legacyRulesDir = "$env:USERPROFILE\.gemini\antigravity\rules"
+
+foreach ($dir in @($globalConfigDir, $globalRulesDir, $legacyRulesDir)) {
+    if (-not (Test-Path $dir)) {
+        New-Item -ItemType Directory -Path $dir -Force | Out-Null
+    }
 }
 
-$ruleContent = @'
+$ruleHeader = @'
 ---
 description: Always format Persian responses with RTL right alignment, Vazirmatn 19px font, HTML tables with dir="rtl", and professional LTR log blocks.
 globs: "*"
+always_on: true
 ---
 
-# Persian RTL and Formatting Rule
+# Global Persian Formatting & RTL Rules
 
 Whenever responding in Persian:
 1. Always wrap the entire response in a `<div dir="rtl" style="font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif; font-size: 19px; line-height: 2.0; text-align: right;">` container.
@@ -108,8 +115,12 @@ Whenever responding in Persian:
 3. For all logs, command outputs, file paths, and terminal snippets, display them in professional LTR log blocks using `<div dir="ltr" style="background:#161b22; color:#e6edf3; padding:12px; border-radius:8px; border-left:4px solid #58a6ff; font-family:Consolas, monospace; font-size:15px; text-align:left; margin:10px 0;">...</div>`.
 '@
 
-Set-Content -Path (Join-Path $globalRulesDir "persian_formatting.md") -Value $ruleContent -Encoding UTF8
-Write-Host "Global Rule created: $globalRulesDir\persian_formatting.md" -ForegroundColor Green
+Set-Content -Path (Join-Path $globalConfigDir "GEMINI.md") -Value $ruleHeader -Encoding UTF8
+Set-Content -Path (Join-Path $globalConfigDir "AGENTS.md") -Value $ruleHeader -Encoding UTF8
+Set-Content -Path (Join-Path $globalRulesDir "persian_formatting.md") -Value $ruleHeader -Encoding UTF8
+Set-Content -Path (Join-Path $legacyRulesDir "persian_formatting.md") -Value $ruleHeader -Encoding UTF8
+
+Write-Host "Machine-wide rules created in ~/.gemini/config/" -ForegroundColor Green
 
 Write-Host "==========================================================" -ForegroundColor Cyan
 Write-Host "Offline Local Setup Completed Successfully!" -ForegroundColor Green
